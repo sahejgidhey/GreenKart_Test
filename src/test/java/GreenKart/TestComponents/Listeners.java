@@ -1,28 +1,70 @@
 package GreenKart.TestComponents;
 
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listeners implements ITestListener
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+import GreenKart.resources.ExtentReport;
+
+public class Listeners extends BaseTest implements ITestListener
 {
 
+	ExtentTest test ; 
+	ExtentReports extent = ExtentReport.getreports();
+	
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	
 	@Override
-	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestStart(result);
+	public void onTestStart(ITestResult result) 
+	{
+		
+		test = extent.createTest(result.getMethod().getMethodName());
+		extentTest.set(test);
+		
 	}
 
 	@Override
-	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestSuccess(result);
+	public void onTestSuccess(ITestResult result)
+	{
+		
+		extentTest.get().log(Status.PASS, "Test passed");
+		
 	}
 
 	@Override
-	public void onTestFailure(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestFailure(result);
+	public void onTestFailure(ITestResult result) 
+	{
+		String path = null ; 
+		
+		extentTest.get().fail(result.getThrowable());
+		
+		try
+		{
+			
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+			
+		}
+		catch(Exception e1)
+		{
+			e1.printStackTrace();
+		}
+		
+		try {
+			path = getScreenshot(result.getMethod().getMethodName() , driver);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		test.addScreenCaptureFromPath(path , result.getMethod().getMethodName());
+		
 	}
 
 	@Override
@@ -50,9 +92,11 @@ public class Listeners implements ITestListener
 	}
 
 	@Override
-	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onFinish(context);
+	public void onFinish(ITestContext context) 
+	{
+		
+		extent.flush();
+		
 	}
 
 	

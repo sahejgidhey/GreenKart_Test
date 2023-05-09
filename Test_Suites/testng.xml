@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="GreenKart">
 
+<listeners>
+	
+	<listener class-name="GreenKart.TestComponents.Listeners"></listener>
+
+</listeners>
 
 	<test name="cart">
     	<classes>
