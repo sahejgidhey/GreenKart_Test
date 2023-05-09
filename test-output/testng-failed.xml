@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [GreenKart]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="cart(failed)">
+    <classes>
+      <class name="GreenKart.Test.cart">
+        <methods>
+          <include name="refershCheck"/>
+          <include name="itemCheck"/>
+          <include name="amountCheck"/>
+          <include name="launchApplication"/>
+          <include name="AddToCartLabelCheck"/>
+          <include name="terminate"/>
+        </methods>
+      </class> <!-- GreenKart.Test.cart -->
+    </classes>
+  </test> <!-- cart(failed) -->
+  <test thread-count="5" name="Error(failed)">
+    <classes>
+      <class name="GreenKart.Test.ErrorValidiationTest">
+        <methods>
+          <include name="searchBox"/>
+          <include name="checkoutButton"/>
+          <include name="launchApplication"/>
+          <include name="terminate"/>
+        </methods>
+      </class> <!-- GreenKart.Test.ErrorValidiationTest -->
+    </classes>
+  </test> <!-- Error(failed) -->
+</suite> <!-- Failed suite [GreenKart] -->
