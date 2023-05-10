@@ -4,7 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import GreenKart.TestComponents.BaseTest;
 
@@ -43,32 +45,88 @@ public class cart extends BaseTest
 		
 	}
 	
+	@Test(dependsOnMethods = "AddToCartLabelCheck" , dataProvider = "getData")
+	public void refershCheck(String[] vege)
+	{
+		
+		homepage.pagerefresh();
+		
+		for(int i = 0 ; i < vege.length ; i++)
+		{
+			
+			Assert.assertTrue(homepage.cartItemsCheck(vege[i]));
+			
+		}
+		
+	}
+	
+	@Test(dependsOnMethods = "itemCheck" , dataProvider = "getData")
+	public void amountCheck(String[] vege)
+	{
+		
+		homepage.clickOnCart();
+		
+		for(int i = 0 ; i < vege.length ; i++)
+		{
+			
+			Assert.assertTrue(homepage.amountCheck(vege[i] , 1));
+			
+		}
+		
+		homepage.clickOnCart();
+		
+	}
+	
+	@Test(dependsOnMethods = "amountCheck" , dataProvider = "getData")
+	public void AddToCartLabelCheck(String[] vege)
+	{
+		
+		homepage.pagerefresh();
+		for(int i = 0 ; i < vege.length ; i++)
+		{
+			
+			homepage.addToCart(vege[i]);
+			Assert.assertTrue(homepage.getTextFromAddToCart(vege[i]).contains("ADDED"));
+			
+		}
+		
+		
+	}
+	
 	@Test(dependsOnMethods = "AddToCartLabelCheck")
-	public void refershCheck()
+	public void itemCountCheck()
 	{
+		
+		String product[][] = {{"Cucumber" , "5"} , {"Beetroot" , "1"}};
+		
+		SoftAssert sa = new SoftAssert();
 		
 		homepage.pagerefresh();
-		Assert.assertTrue(homepage.cartItemsCheck("Beetroot"));
 		
-	}
-	
-	@Test(dependsOnMethods = "itemCheck")
-	public void amountCheck()
-	{
+		for(int i = 0 ; i < product.length ; i++)
+		{
+			
+			if(Integer.parseInt(product[i][1].trim()) > 1)
+			{
+				
+				homepage.increaseItemswithTextField(product[i][1], product[i][0]);
+				
+			}
+			
+			homepage.addToCart(product[i][0]);
+			
+		}
 		
-		//homepage.clickOnCart();
-		Assert.assertTrue(homepage.amountCheck("Beetroot", 1));
+		homepage.clickOnCart();
 		
-	}
-	
-	@Test(dependsOnMethods = "amountCheck")
-	public void AddToCartLabelCheck()
-	{
+		for(int i = 0 ; i < product.length ; i++)
+		{
+			
+			sa.assertTrue(homepage.itemCountCheck(product[i][0], product[i][1]));
+			
+		}
 		
-		homepage.pagerefresh();
-		String name = "Beetroot" ; 
-		homepage.addToCart(name);
-		Assert.assertTrue(homepage.getTextFromAddToCart(name).contains("ADDED"));
+		sa.assertAll();
 		
 	}
 	

@@ -8,27 +8,16 @@
     <classes>
       <class name="GreenKart.Test.cart">
         <methods>
-          <include name="refershCheck"/>
-          <include name="itemCheck"/>
+          <include name="refershCheck" invocation-numbers="0 1"/>
           <include name="amountCheck"/>
+          <include name="itemCheck"/>
           <include name="launchApplication"/>
-          <include name="terminate"/>
           <include name="AddToCartLabelCheck"/>
+          <include name="terminate"/>
         </methods>
       </class> <!-- GreenKart.Test.cart -->
     </classes>
   </test> <!-- cart(failed) -->
-  <test thread-count="5" name="Header(failed)" verbose="0">
-    <classes>
-      <class name="GreenKart.Test.HeaderTest">
-        <methods>
-          <include name="headerLink"/>
-          <include name="launchApplication"/>
-          <include name="terminate"/>
-        </methods>
-      </class> <!-- GreenKart.Test.HeaderTest -->
-    </classes>
-  </test> <!-- Header(failed) -->
   <test thread-count="5" name="Error(failed)" verbose="0">
     <classes>
       <class name="GreenKart.Test.ErrorValidiationTest">

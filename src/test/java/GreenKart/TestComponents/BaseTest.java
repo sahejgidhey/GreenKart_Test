@@ -2,12 +2,12 @@ package GreenKart.TestComponents;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -64,6 +64,7 @@ public class BaseTest
 			
 		}
 		
+		driver.manage().window().setSize(new Dimension(1920,1080));
 		
 		return driver ; 
 		
@@ -108,10 +109,10 @@ public class BaseTest
 	public String[][] getData()
 	{
 		
-		String[][] products = {{"Cucumber" , "Beetroot"} , {"Brocolli" , "Cauliflower"}};
+		String product[][] = {{"Cucumber" , "Beetroot"} , {"Brocolli" , "Cauliflower"}};
 		
-		return products ; 
+		return product ; 
 		
-	}
+	}	
 	
 }

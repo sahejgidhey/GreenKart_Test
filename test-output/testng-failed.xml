@@ -5,9 +5,13 @@
     <classes>
       <class name="GreenKart.Test.cart">
         <methods>
+          <include name="itemCountCheck"/>
+          <include name="refershCheck" invocation-numbers="0 1"/>
+          <include name="amountCheck"/>
           <include name="itemCheck"/>
-          <include name="countCheck" invocation-numbers="1"/>
           <include name="launchApplication"/>
+          <include name="terminate"/>
+          <include name="AddToCartLabelCheck"/>
         </methods>
       </class> <!-- GreenKart.Test.cart -->
     </classes>

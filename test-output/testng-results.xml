@@ -1,60 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="7" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="8" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-10T17:42:25 IST" name="Default suite" finished-at="2023-05-10T17:42:34 IST" duration-ms="9412">
+  <suite started-at="2023-05-10T22:30:40 IST" name="Default suite" finished-at="2023-05-10T22:31:12 IST" duration-ms="32404">
     <groups>
     </groups>
-    <test started-at="2023-05-10T17:42:25 IST" name="Default test" finished-at="2023-05-10T17:42:34 IST" duration-ms="9412">
+    <test started-at="2023-05-10T22:30:40 IST" name="Default test" finished-at="2023-05-10T22:31:12 IST" duration-ms="32404">
       <class name="GreenKart.Test.cart">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:GreenKart.Test.cart@437da279]" started-at="2023-05-10T17:42:25 IST" name="launchApplication" finished-at="2023-05-10T17:42:30 IST" duration-ms="5415" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:40 IST" name="launchApplication" finished-at="2023-05-10T22:30:45 IST" duration-ms="5509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="itemCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@437da279]" started-at="2023-05-10T17:42:30 IST" name="itemCheck" data-provider="getData" finished-at="2023-05-10T17:42:32 IST" duration-ms="1462" status="PASS">
+        <test-method signature="itemCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:45 IST" name="itemCheck" data-provider="getData" finished-at="2023-05-10T22:30:48 IST" duration-ms="2282" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@7d44a19]]>
+                <![CDATA[[Ljava.lang.String;@3af2f846]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- itemCheck -->
-        <test-method signature="itemCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@437da279]" started-at="2023-05-10T17:42:32 IST" name="itemCheck" data-provider="getData" finished-at="2023-05-10T17:42:33 IST" duration-ms="1104" status="PASS">
+        <test-method signature="itemCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:48 IST" name="itemCheck" data-provider="getData" finished-at="2023-05-10T22:30:49 IST" duration-ms="1813" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@698fee9a]]>
+                <![CDATA[[Ljava.lang.String;@3c81cd82]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- itemCheck -->
-        <test-method signature="countCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@437da279]" started-at="2023-05-10T17:42:33 IST" name="countCheck" data-provider="getData" finished-at="2023-05-10T17:42:33 IST" depends-on-methods="GreenKart.Test.cart.itemCheck" duration-ms="571" status="PASS">
+        <test-method signature="amountCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:50 IST" name="amountCheck" data-provider="getData" finished-at="2023-05-10T22:30:51 IST" depends-on-methods="GreenKart.Test.cart.itemCheck" duration-ms="1264" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@1fb2d5e]]>
+                <![CDATA[[Ljava.lang.String;@370c9018]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amountCheck -->
+        <test-method signature="amountCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:51 IST" name="amountCheck" data-provider="getData" finished-at="2023-05-10T22:30:52 IST" depends-on-methods="GreenKart.Test.cart.itemCheck" duration-ms="1196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@6af65f29]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amountCheck -->
+        <test-method signature="countCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:52 IST" name="countCheck" data-provider="getData" finished-at="2023-05-10T22:30:53 IST" depends-on-methods="GreenKart.Test.cart.itemCheck" duration-ms="582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@46b2dcc5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- countCheck -->
-        <test-method signature="countCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@437da279]" started-at="2023-05-10T17:42:33 IST" name="countCheck" data-provider="getData" finished-at="2023-05-10T17:42:34 IST" depends-on-methods="GreenKart.Test.cart.itemCheck" duration-ms="782" status="PASS">
+        <test-method signature="countCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:53 IST" name="countCheck" data-provider="getData" finished-at="2023-05-10T22:30:53 IST" depends-on-methods="GreenKart.Test.cart.itemCheck" duration-ms="908" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@102c577f]]>
+                <![CDATA[[Ljava.lang.String;@240f350a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- countCheck -->
+        <test-method signature="AddToCartLabelCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:53 IST" name="AddToCartLabelCheck" data-provider="getData" finished-at="2023-05-10T22:30:56 IST" depends-on-methods="GreenKart.Test.cart.amountCheck" duration-ms="2707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@706f6d26]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCartLabelCheck -->
+        <test-method signature="AddToCartLabelCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:56 IST" name="AddToCartLabelCheck" data-provider="getData" finished-at="2023-05-10T22:30:58 IST" depends-on-methods="GreenKart.Test.cart.amountCheck" duration-ms="1962" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@111c229c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCartLabelCheck -->
+        <test-method signature="itemCountCheck()[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:30:58 IST" name="itemCountCheck" finished-at="2023-05-10T22:31:01 IST" depends-on-methods="GreenKart.Test.cart.AddToCartLabelCheck" duration-ms="3070" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at GreenKart.Test.cart.itemCountCheck(cart.java:129)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- itemCountCheck -->
+        <test-method signature="refershCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:31:01 IST" name="refershCheck" data-provider="getData" finished-at="2023-05-10T22:31:07 IST" depends-on-methods="GreenKart.Test.cart.AddToCartLabelCheck" duration-ms="5379" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@58b311ba]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at GreenKart.Test.cart.refershCheck(cart.java:57)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refershCheck -->
+        <test-method signature="refershCheck([Ljava.lang.String;)[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:31:07 IST" name="refershCheck" data-provider="getData" finished-at="2023-05-10T22:31:12 IST" depends-on-methods="GreenKart.Test.cart.AddToCartLabelCheck" duration-ms="5423" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@482c351d]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at GreenKart.Test.cart.refershCheck(cart.java:57)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refershCheck -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:GreenKart.Test.cart@3e27aa33]" started-at="2023-05-10T22:31:12 IST" name="terminate" finished-at="2023-05-10T22:31:12 IST" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
       </class> <!-- GreenKart.Test.cart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

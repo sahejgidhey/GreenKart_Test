@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,12 +21,11 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sahej\AppData\Local\Temp\testng-eclipse-1672927851\testng-customsuite.xml</span>
+                    <span>C:\Users\Sahej\AppData\Local\Temp\testng-eclipse--1943565065\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">11 methods, 3 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="itemCountCheck">itemCountCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="refershCheck([Cucumber, Beetroot])">refershCheck([Cucumber, Beetroot])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="refershCheck([Brocolli, Cauliflower])">refershCheck([Brocolli, Cauliflower])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +127,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="countCheck([Brocolli, Cauliflower])">countCheck([Brocolli, Cauliflower])</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="AddToCartLabelCheck([Cucumber, Beetroot])">AddToCartLabelCheck([Cucumber, Beetroot])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="AddToCartLabelCheck([Brocolli, Cauliflower])">AddToCartLabelCheck([Brocolli, Cauliflower])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="amountCheck([Brocolli, Cauliflower])">amountCheck([Brocolli, Cauliflower])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="amountCheck([Cucumber, Beetroot])">amountCheck([Cucumber, Beetroot])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -114,12 +152,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="itemCheck([Brocolli, Cauliflower])">itemCheck([Brocolli, Cauliflower])</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="countCheck([Brocolli, Cauliflower])">countCheck([Brocolli, Cauliflower])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="itemCheck([Cucumber, Beetroot])">itemCheck([Cucumber, Beetroot])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GreenKart.Test.cart" class="method navigator-link" hash-for-method="itemCheck([Brocolli, Cauliflower])">itemCheck([Brocolli, Cauliflower])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -134,6 +177,144 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">GreenKart.Test.cart</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="itemCountCheck">
+                  </a> <!-- itemCountCheck -->
+                  <span class="method-name">itemCountCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at GreenKart.Test.cart.itemCountCheck(cart.java:129)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="refershCheck([Cucumber, Beetroot])">
+                  </a> <!-- refershCheck([Cucumber, Beetroot]) -->
+                  <span class="method-name">refershCheck</span>
+                  <span class="parameters">([Cucumber, Beetroot])</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at GreenKart.Test.cart.refershCheck(cart.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="refershCheck([Brocolli, Cauliflower])">
+                  </a> <!-- refershCheck([Brocolli, Cauliflower]) -->
+                  <span class="method-name">refershCheck</span>
+                  <span class="parameters">([Brocolli, Cauliflower])</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at GreenKart.Test.cart.refershCheck(cart.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -142,10 +323,34 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="countCheck([Brocolli, Cauliflower])">
-                  </a> <!-- countCheck([Brocolli, Cauliflower]) -->
-                  <span class="method-name">countCheck</span>
+                  <a name="AddToCartLabelCheck([Cucumber, Beetroot])">
+                  </a> <!-- AddToCartLabelCheck([Cucumber, Beetroot]) -->
+                  <span class="method-name">AddToCartLabelCheck</span>
+                  <span class="parameters">([Cucumber, Beetroot])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddToCartLabelCheck([Brocolli, Cauliflower])">
+                  </a> <!-- AddToCartLabelCheck([Brocolli, Cauliflower]) -->
+                  <span class="method-name">AddToCartLabelCheck</span>
                   <span class="parameters">([Brocolli, Cauliflower])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="amountCheck([Brocolli, Cauliflower])">
+                  </a> <!-- amountCheck([Brocolli, Cauliflower]) -->
+                  <span class="method-name">amountCheck</span>
+                  <span class="parameters">([Brocolli, Cauliflower])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="amountCheck([Cucumber, Beetroot])">
+                  </a> <!-- amountCheck([Cucumber, Beetroot]) -->
+                  <span class="method-name">amountCheck</span>
+                  <span class="parameters">([Cucumber, Beetroot])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -158,9 +363,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="itemCheck([Brocolli, Cauliflower])">
-                  </a> <!-- itemCheck([Brocolli, Cauliflower]) -->
-                  <span class="method-name">itemCheck</span>
+                  <a name="countCheck([Brocolli, Cauliflower])">
+                  </a> <!-- countCheck([Brocolli, Cauliflower]) -->
+                  <span class="method-name">countCheck</span>
                   <span class="parameters">([Brocolli, Cauliflower])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -172,12 +377,20 @@
                   <span class="parameters">([Cucumber, Beetroot])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="itemCheck([Brocolli, Cauliflower])">
+                  </a> <!-- itemCheck([Brocolli, Cauliflower]) -->
+                  <span class="method-name">itemCheck</span>
+                  <span class="parameters">([Brocolli, Cauliflower])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sahej\AppData\Local\Temp\testng-eclipse-1672927851\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sahej\AppData\Local\Temp\testng-eclipse--1943565065\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -186,12 +399,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;GreenKart.Test.cart&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;itemCheck&quot;/&gt;
-          &lt;include name=&quot;countCheck&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- GreenKart.Test.cart --&gt;
+      &lt;class name=&quot;GreenKart.Test.cart&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -231,28 +439,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'itemCheck')
+data.setCell(0, 1, 'refershCheck')
 data.setCell(0, 2, 'GreenKart.Test.cart')
-data.setCell(0, 3, 1462);
+data.setCell(0, 3, 5423);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'itemCheck')
+data.setCell(1, 1, 'refershCheck')
 data.setCell(1, 2, 'GreenKart.Test.cart')
-data.setCell(1, 3, 1104);
+data.setCell(1, 3, 5379);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'countCheck')
+data.setCell(2, 1, 'itemCountCheck')
 data.setCell(2, 2, 'GreenKart.Test.cart')
-data.setCell(2, 3, 782);
+data.setCell(2, 3, 3070);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'countCheck')
+data.setCell(3, 1, 'AddToCartLabelCheck')
 data.setCell(3, 2, 'GreenKart.Test.cart')
-data.setCell(3, 3, 571);
+data.setCell(3, 3, 2707);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'itemCheck')
+data.setCell(4, 2, 'GreenKart.Test.cart')
+data.setCell(4, 3, 2282);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'AddToCartLabelCheck')
+data.setCell(5, 2, 'GreenKart.Test.cart')
+data.setCell(5, 3, 1962);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'itemCheck')
+data.setCell(6, 2, 'GreenKart.Test.cart')
+data.setCell(6, 3, 1813);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'amountCheck')
+data.setCell(7, 2, 'GreenKart.Test.cart')
+data.setCell(7, 3, 1264);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'amountCheck')
+data.setCell(8, 2, 'GreenKart.Test.cart')
+data.setCell(8, 3, 1196);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'countCheck')
+data.setCell(9, 2, 'GreenKart.Test.cart')
+data.setCell(9, 3, 908);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'countCheck')
+data.setCell(10, 2, 'GreenKart.Test.cart')
+data.setCell(10, 3, 582);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -267,20 +503,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">GreenKart.Test.cart</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">refershCheck</span>
-                <br/>
-                <span class="ignored-method-name">amountCheck</span>
-                <br/>
-                <span class="ignored-method-name">AddToCartLabelCheck</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -296,20 +521,58 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">itemCheck([Cucumber, Beetroot])</span>
-                <span class="method-start">5466 ms</span>
+                <span class="method-start">5571 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">itemCheck([Brocolli, Cauliflower])</span>
-                <span class="method-start">6935 ms</span>
+                <span class="method-start">7860 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">amountCheck([Cucumber, Beetroot])</span>
+                <span class="method-start">9685 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">amountCheck([Brocolli, Cauliflower])</span>
+                <span class="method-start">10953 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">countCheck([Cucumber, Beetroot])</span>
-                <span class="method-start">8046 ms</span>
+                <span class="method-start">12153 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">countCheck([Brocolli, Cauliflower])</span>
-                <span class="method-start">8620 ms</span>
+                <span class="method-start">12737 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddToCartLabelCheck([Cucumber, Beetroot])</span>
+                <span class="method-start">13651 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddToCartLabelCheck([Brocolli, Cauliflower])</span>
+                <span class="method-start">16360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">itemCountCheck</span>
+                <span class="method-start">18325 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">refershCheck([Cucumber, Beetroot])</span>
+                <span class="method-start">21400 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">refershCheck([Brocolli, Cauliflower])</span>
+                <span class="method-start">26781 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">terminate</span>
+                <span class="method-start">32208 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
