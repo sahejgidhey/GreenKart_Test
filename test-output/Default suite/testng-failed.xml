@@ -6,10 +6,8 @@
       <class name="GreenKart.Test.cart">
         <methods>
           <include name="itemCheck"/>
-          <include name="amountCheck"/>
+          <include name="countCheck" invocation-numbers="1"/>
           <include name="launchApplication"/>
-          <include name="AddToCartLabelCheck"/>
-          <include name="terminate"/>
         </methods>
       </class> <!-- GreenKart.Test.cart -->
     </classes>

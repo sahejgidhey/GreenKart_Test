@@ -11,11 +11,10 @@ import GreenKart.TestComponents.BaseTest;
 public class cart extends BaseTest
 {
 
-	@Test
-	public void itemCheck()
+	@Test(dataProvider = "getData")
+	public void itemCheck(String[] vege)
 	{
 		
-		String[] vege = {"Cucumber" , "Beetroot"};
 		List<String> vegetables = Arrays.asList(vege);
 		
 		//homepage.increaseItemswithTextField("5" , "Cucumber");
@@ -23,14 +22,24 @@ public class cart extends BaseTest
 		
 		homepage.clickOnCart();
 		vegetables.stream().forEach(s->Assert.assertTrue(homepage.cartItemsCheck(s)));
+		homepage.clickOnCart();
 		
 	}
 	
-	@Test(dependsOnMethods = "itemCheck")
-	public void countCheck()
+	@Test(dependsOnMethods = "itemCheck" , dataProvider = "getData")
+	public void countCheck(String[] vege)
 	{
 		
-		Assert.assertTrue(homepage.itemCountCheck("Beetroot", "1"));
+		homepage.clickOnCart();
+		
+		for(int i = 0 ; i < vege.length ; i++)
+		{
+			
+			Assert.assertTrue(homepage.itemCountCheck(vege[i] , "1"));
+			
+		}
+		
+		homepage.clickOnCart();
 		
 	}
 	

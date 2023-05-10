@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import GreenKart.TestComponents.BaseTest;
+import GreenKart.TestComponents.Retry;
 
 public class HeaderTest extends BaseTest
 {
@@ -25,12 +26,12 @@ public class HeaderTest extends BaseTest
 		
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void headerLink()
 	{
 		
 		String a = homepage.getHeaderLinksTitle("Free Access to InterviewQues/ResumeAssistance/Material");
-		Assert.assertTrue(a.equalsIgnoreCase("RS Academy"));
+		Assert.assertEquals(a , "RS Academy");
 		
 	}
 	

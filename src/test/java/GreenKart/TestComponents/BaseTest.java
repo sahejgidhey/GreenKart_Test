@@ -1,16 +1,22 @@
 package GreenKart.TestComponents;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 
 import GreenKart.PageObjects.HomePage;
 
@@ -20,16 +26,51 @@ public class BaseTest
 	public WebDriver driver ;
 	protected HomePage homepage ; 
 	
-	public WebDriver intializingDriver()
+	public WebDriver intializingDriver() throws IOException
 	{
 		
-		WebDriver driver = new ChromeDriver();
+		Properties prop = new Properties();
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\GreenKart\\resources\\Global.properties");
+		
+		prop.load(file);
+		
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
+		
+		if(browserName.contains("chrome"))
+		{
+			
+			ChromeOptions options = new ChromeOptions();
+			
+			if(browserName.contains("headless"))
+			{
+				
+				options.addArguments("headless");
+				
+			}
+			
+			driver = new ChromeDriver(options);;
+			
+		}
+		else if(browserName.contains("firefox"))
+		{
+			
+			driver = new FirefoxDriver();
+			
+		}
+		else
+		{
+			
+			driver = new ChromeDriver();
+			
+		}
+		
+		
 		return driver ; 
 		
 	}
 	
 	@BeforeTest
-	public HomePage launchApplication()
+	public HomePage launchApplication() throws IOException
 	{
 		
 		driver = intializingDriver();
@@ -60,6 +101,16 @@ public class BaseTest
 	{
 		
 		driver.close();
+		
+	}
+	
+	@DataProvider
+	public String[][] getData()
+	{
+		
+		String[][] products = {{"Cucumber" , "Beetroot"} , {"Brocolli" , "Cauliflower"}};
+		
+		return products ; 
 		
 	}
 	
